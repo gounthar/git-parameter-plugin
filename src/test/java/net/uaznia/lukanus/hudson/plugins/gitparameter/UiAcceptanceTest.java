@@ -54,7 +54,7 @@ public class UiAcceptanceTest {
                     new ChromeOptions().addArguments("--headless", "--disable-dev-shm-usage", "--no-sandbox", "--remote-allow-origins=*"));
 
         } else {
-            driver = new ChromeDriver(new ChromeOptions());
+            driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         }
     }
 
