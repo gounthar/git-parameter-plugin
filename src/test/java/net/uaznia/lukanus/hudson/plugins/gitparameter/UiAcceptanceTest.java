@@ -51,7 +51,8 @@ public class UiAcceptanceTest {
     public void setUp() throws Exception {
         if (isCi()) {
             driver = new ChromeDriver(
-                    new ChromeOptions().addArguments("--headless", "--disable-dev-shm-usage", "--no-sandbox"));
+                    new ChromeOptions().addArguments("--headless", "--disable-dev-shm-usage", "--no-sandbox", "--remote-allow-origins=*"));
+
         } else {
             driver = new ChromeDriver(new ChromeOptions());
         }
